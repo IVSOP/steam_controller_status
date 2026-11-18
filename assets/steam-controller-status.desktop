@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Steam Controller Status
+Comment=Battery and charge status for connected Steam Controllers
+Exec=steam-controller-status
+Icon=steam-controller-status
+Terminal=false
+Categories=Utility;Monitor;
+Keywords=Steam;Controller;Battery;

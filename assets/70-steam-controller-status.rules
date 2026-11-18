@@ -1,0 +1,7 @@
+# Grant the active local user access to Steam Controller (2026) HID reports.
+# Must run before 73-seat-late.rules, which applies the uaccess ACL.
+ACTION=="add|change", SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="1302", MODE="0660", TAG+="uaccess"
+ACTION=="add|change", SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="1304", MODE="0660", TAG+="uaccess"
+ACTION=="add|change", SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="1305", MODE="0660", TAG+="uaccess"
+# Bluetooth has no USB idVendor/idProduct attributes.
+ACTION=="add|change", SUBSYSTEM=="hidraw", KERNEL=="hidraw*", KERNELS=="0005:28DE:1303.*", MODE="0660", TAG+="uaccess"

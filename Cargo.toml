@@ -1,0 +1,29 @@
+[package]
+name = "steam_controller_status"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.100"
+description = "A Wayland-friendly tray battery monitor for Steam Controller (2026)"
+license = "MIT"
+
+[dependencies]
+anyhow = "1.0.104"
+async-hid = { version = "0.5.3", default-features = false, features = ["tokio"] }
+better_tokio_select = "0.2.0"
+clap = { version = "4.6.8", features = ["derive", "env"] }
+futures-util = "0.3.34"
+humantime = "2.4.0"
+ksni = "0.3.7"
+tokio = { version = "1.54.1", features = ["macros", "rt", "signal", "sync", "time"] }
+tokio-stream = "0.1.19"
+
+[dev-dependencies]
+tokio = { version = "1.54.1", features = ["test-util"] }
+
+[[bin]]
+name = "steam-controller-status"
+path = "src/main.rs"
+
+[profile.release]
+lto = "thin"
+strip = true
