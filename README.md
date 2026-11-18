@@ -4,7 +4,7 @@ A Linux tray applet for the **2026 Steam Controller**. Shows each controller's
 battery percentage and charge status, plus a Quit button. Works on Wayland;
 Steam does not need to be running. Reads await HID reports using Tokio.
 
-![Steam Controller Status tray menu](assets/screenshot.png)
+![Steam Controller Status tray menu](assets/screenshot.jpg)
 
 Inspired by [Steam Controller Battery Monitor](https://github.com/Pixel1011/Steam-Controller-Battery-Monitor), written in C++.
 
